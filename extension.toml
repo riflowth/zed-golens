@@ -1,0 +1,11 @@
+id = "golens"
+name = "golens"
+version = "1.0.0"
+schema_version = 1
+authors = ["Krid Heprakhone <riflowth@gmail.com>"]
+description = "Golang CodeLens"
+repository = "https://github.com/riflowth/zed-golens"
+
+[language_servers.golens]
+name = "golens"
+languages = ["Go"]
