@@ -34,10 +34,19 @@ type Command struct {
 	Args    []any  `json:"arguments,omitempty"`
 }
 
+type Location struct {
+	URI   string `json:"uri"`
+	Range Range  `json:"range"`
+}
+
 func URIToPath(uri string) string {
 	u, err := url.Parse(uri)
 	if err != nil {
 		return strings.TrimPrefix(uri, "file://")
 	}
 	return u.Path
+}
+
+func PathToURI(path string) string {
+	return "file://" + path
 }

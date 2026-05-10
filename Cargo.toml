@@ -2,9 +2,11 @@
 name = "golens"
 version = "1.0.0"
 edition = "2024"
+publish = false
 
 [dependencies]
 zed_extension_api = "0.7.0"
 
 [lib]
+path = "src/golens.rs"
 crate-type = ["cdylib"]
